@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/appf/!svn/ver/113/report_aeroo/wizard
+END
+add_print_button_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/appf/!svn/ver/113/report_aeroo/wizard/add_print_button_view.xml
+END
+remove_print_button.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/appf/!svn/ver/113/report_aeroo/wizard/remove_print_button.py
+END
+report_import_wizard.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/appf/!svn/ver/113/report_aeroo/wizard/report_import_wizard.py
+END
+remove_print_button_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/appf/!svn/ver/113/report_aeroo/wizard/remove_print_button_view.xml
+END
+report_print_actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/appf/!svn/ver/113/report_aeroo/wizard/report_print_actions.py
+END
+report_actions_remove.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/appf/!svn/ver/113/report_aeroo/wizard/report_actions_remove.py
+END
+report_actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/appf/!svn/ver/113/report_aeroo/wizard/report_actions.py
+END
+report_print_by_action.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/appf/!svn/ver/113/report_aeroo/wizard/report_print_by_action.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/appf/!svn/ver/113/report_aeroo/wizard/__init__.py
+END
+add_print_button.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/appf/!svn/ver/113/report_aeroo/wizard/add_print_button.py
+END

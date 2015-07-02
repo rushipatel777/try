@@ -1,0 +1,173 @@
+<openerp> 
+	<data>
+		<menuitem id="menu_profile" name ="sale Management System"/>
+		<menuitem id="menu_profile_cofig" name ="Information" parent="menu_profile" />
+		
+	    	<record  id = "view_id_sale" model="ir.ui.view">
+				<field name="name">view.id.sale</field>
+				<field name="model">saleorder.saleorder</field>   
+	   			<field name="arch" type = "xml">
+					<form string="profile" version = "8.0">
+
+					<group>
+						<field name="name"/> 											
+						<field name="ocode"/>
+						<field name="sl_ids"/>
+					</group>
+	
+					</form>	   		   		
+	   			</field>
+	   		</record>
+	   		
+		<record  id = "sale_id_tree" model="ir.ui.view">
+				<field name="name">sale.id.tree</field>
+				<field name="model">saleorder.saleorder</field>   
+	   			<field name="arch" type = "xml">					
+					<tree string="Sale Order Information">
+						<field name="name"/>								
+						<field name="ocode"/>	
+						<field name="sl_ids"/>			
+					</tree>
+	   			</field>
+	   		</record>	
+
+
+			<record id = "view_saleorder_action" model="ir.actions.act_window">
+				<field name="name">Sale Order</field>
+				<field name="res_model">saleorder.saleorder</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="ref_menu" ref="sale_id_tree"></field>
+			</record>
+			<menuitem id="menu_action_profile_1"	parent="menu_profile_cofig" action="view_saleorder_action"/>
+			
+	<!--invoice -->
+
+	<record  id = "view_id_invoice" model="ir.ui.view">
+				<field name="name">view.id.invoice</field>
+				<field name="model">invoice.invoice</field>   
+	   			<field name="arch" type = "xml">
+					<form string="profile" version = "8.0">
+
+					<group>
+						<field name="name"/> 											
+						<field name="icode"/>
+						<field name="al_ids"/>
+						<field name="iso_id" />
+					</group>
+	
+					</form>	   		   		
+	   			</field>
+	   		</record>
+	   		
+		<record  id = "invoice_id_tree" model="ir.ui.view">
+				<field name="name">invoice.id.tree</field>
+				<field name="model">invoice.invoice</field>   
+	   			<field name="arch" type = "xml">					
+					<tree string="Invoice Information">
+						<field name="name"/>								
+						<field name="icode"/>	
+						<field name="al_ids"/>
+						<field name="iso_id"/>	
+					</tree>
+	   			</field>
+	   		</record>	
+
+
+			<record id = "view_invoice_action" model="ir.actions.act_window">
+				<field name="name">Invoice</field>
+				<field name="res_model">invoice.invoice</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="ref_menu" ref="invoice_id_tree"></field>
+			</record>
+			<menuitem id="menu_action_profile_2"	parent="menu_profile_cofig" action="view_invoice_action"/>
+
+<!--sale line order-->
+
+	<record  id = "view_id_saleline" model="ir.ui.view">
+				<field name="name">view.id.saleline</field>
+				<field name="model">saleline.saleline</field>   
+	   			<field name="arch" type = "xml">
+					<form string="profile" version = "8.0">
+
+					<group>
+						<field name="name"/> 
+						<field name="number"/>											
+						<field name="slcode"/>
+						<field name="so_id"/>
+						<field name="pin"/>
+					</group>
+	
+					</form>	   		   		
+	   			</field>
+	   		</record>
+	   		
+		<record  id = "saleline_id_tree" model="ir.ui.view">
+				<field name="name">saleline.id.tree</field>
+				<field name="model">saleline.saleline</field>   
+	   			<field name="arch" type = "xml">					
+					<tree string="Sale Line Information">
+						<field name="name"/>								
+						<field name="slcode"/>	
+						<field name="so_id"/>
+
+					</tree>
+	   			</field>
+	   		</record>	
+
+
+			<record id = "view_saleline_action" model="ir.actions.act_window">
+				<field name="name">Sale Line</field>
+				<field name="res_model">saleline.saleline</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="ref_menu" ref="saleline_id_tree"></field>
+			</record>
+			<menuitem id="menu_action_profile_4"	parent="menu_profile_cofig" action="view_saleline_action"/>
+
+
+
+
+<!--active line order-->
+
+<record  id = "view_id_activeline" model="ir.ui.view">
+				<field name="name">view.id.activeline</field>
+				<field name="model">activeline.activeline</field>   
+	   			<field name="arch" type = "xml">
+					<form string="profile" version = "8.0">
+
+					<group>
+						<field name="name"/> 											
+						<field name="alcode"/>
+						<field name="invo_id"/>
+					</group>
+	
+					</form>	   		   		
+	   			</field>
+	   		</record>
+	   		
+		<record  id = "activeline_id_tree" model="ir.ui.view">
+				<field name="name">activeline.id.tree</field>
+				<field name="model">activeline.activeline</field>   
+	   			<field name="arch" type = "xml">					
+					<tree string="Activeline Information">
+						<field name="name"/>								
+						<field name="alcode"/>	
+						<field name="invo_id"/>
+					</tree>
+	   			</field>
+	   		</record>	
+
+
+			<record id = "view_activeline_action" model="ir.actions.act_window">
+				<field name="name">Activeline</field>
+				<field name="res_model">activeline.activeline</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="ref_menu" ref="activeline_id_tree"></field>
+			</record>
+			<menuitem id="menu_action_profile_5"	parent="menu_profile_cofig" action="view_activeline_action"/>
+			
+			</data>
+</openerp>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+ 		<!-- Menu -->
+		<menuitem name="Employee Management" id="menu_emp_company"/>
+		<menuitem name="Details" id="menu_detail_config" parent="menu_emp_company"/>
+		<menuitem name="Employee Details" id="menu_emp_employee" parent="menu_detail_config"/>
+		<record id="view_emp1_emp1_form" model="ir.ui.view">
+            <field name="name">view.emp1.emp1.form</field>
+            <field name="model">employee1.employee1</field>
+            <field name="arch" type="xml">
+                <form string="Employee Detail" version="7.0">
+                    <sheet string="Employee Details">
+                        <group colspan="4" col="4">
+                            <field name="name" required="1" placeholder="Enter name of Employee"/>
+                            <field name="department_id"/>
+                        </group>
+                    <notebook>
+                            <page string="Personal Information">
+                                <group colspan="2" col="4">
+                                    <field name="nationality"/>
+                                    <field name="contact_no"/>
+                                    <field name="birthdate"/>
+                                    <field name="salary_releted"/>
+                                    <field name="gender"/>
+                                    <field name="address"/>
+                                </group>
+                            </page>
+                            <page string="For Company Use">
+                                <group >
+                                    <field name="emp_company"/>
+                          			<field name="work_address"/>
+									<field name="work_phone_no"/>
+                                   <!--><field name="is_exp"/>
+                                    <field name="year_of_exp" attrs="{'invisible':[('is_exp','=',False)], 'required':[('is_exp','=',True)]}"/><-->
+                                    
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <group colspan="4">
+                                   <field name="notes" nolabel="1"/>
+                                </group>
+                                <separator string="Employee Signature"/>
+                        		<group colspan="4" col="4">
+		                            <field name="emp_signature"/>
+		                        </group>
+                            </page>
+
+
+                        </notebook>
+                        
+                    </sheet>
+                </form>
+            </field>
+       </record>
+       <record id="view_emp1_emp1_tree" model="ir.ui.view">
+            <field name="name">view.emp1.emp1.tree</field>
+            <field name="model">employee1.employee1</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Detail">
+                    <field name="name"/>
+                    <field name="department_id"/>
+                </tree>
+            </field>
+       </record>
+       
+       <record id="action_emp1_emp1" model="ir.actions.act_window">
+            <field name="name">Employeess</field>
+            <field name="res_model">employee1.employee1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_emp1_emp1_tree" />
+       </record>
+       
+       <menuitem id="menu_emp1_emp1_action" parent="menu_detail_config" action="action_emp1_emp1"/>
+       
+       <!-- Department -->
+       
+       <record id="view_dept1_dept1_form" model="ir.ui.view">
+            <field name="name">view.dept1.dept1.form</field>
+            <field name="model">department1.department1</field>
+            <field name="arch" type="xml">
+                <form string="Department Detail" version="7.0">
+                    <sheet string="Department Details">
+                        <group colspan="4" col="4">
+                            <field name="name"/>
+                            <field name="salary"/>
+                        </group>
+                        <notebook>
+                            <page string="Employees">
+                                <field name="employee_ids">
+                                    <tree>
+                                        <field name="name" />
+                                        <field name="gender" />
+                                        <field name="emp_company" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+       </record>
+       <record id="view_dept1_dept1_tree" model="ir.ui.view">
+            <field name="name">view.dept1.dept1.tree</field>
+            <field name="model">department1.department1</field>
+            <field name="arch" type="xml">
+                <tree string="Department Detail">
+                    <field name="name"/>
+                    <field name="salary"/>
+                </tree>
+            </field>
+       </record>
+       
+       <record id="action_dept1_dept1" model="ir.actions.act_window">
+            <field name="name">Department</field>
+            <field name="res_model">department1.department1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_dept1_dept1_tree" />
+       </record>
+       
+       <menuitem id="menu_dept1_dept1_action" parent="menu_detail_config" action="action_dept1_dept1"/>
+       
+       <!-- Company -->
+       
+       <record id="view_company1_company1_form" model="ir.ui.view">
+            <field name="name">view.company1.company1.form</field>
+            <field name="model">company1.company1</field>
+            <field name="arch" type="xml">
+                <form string="Company Detail" version="7.0">
+                    <sheet string="Company Details">
+                        <group colspan="4" col="2">
+                            <field name="name"/>
+                            <field name="department_ids"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+       </record>
+       <record id="view_company1_company1_tree" model="ir.ui.view">
+            <field name="name">view.company1.company1.tree</field>
+            <field name="model">company1.company1</field>
+            <field name="arch" type="xml">
+                <tree string="Company Detail">
+                    <field name="name"/>
+                </tree>
+            </field>
+       </record>
+       
+       <record id="action_company1_company1" model="ir.actions.act_window">
+            <field name="name">Company</field>
+            <field name="res_model">company1.company1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_company1_company1_tree" />
+       </record>
+       
+       <menuitem id="menu_company1_company1_action" parent="menu_detail_config" action="action_company1_company1"/>
+       
+   </data>
+</openerp>

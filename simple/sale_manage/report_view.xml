@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- Action for sale order Excel Report -->
+        	<record id="malay_xls_rep1" model="ir.actions.report.xml">
+            <field name="name">Print</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">saleorder.saleorder</field>
+            <field name="report_type">aeroo</field>
+            <field name="report_name">sao.aeroo.report</field>
+            <field name="in_format">oo-ods</field>
+            <field name="report_rml">sale_manage/report/malayreport.ods</field>
+            <field name="parser_loc">sale_manage/report/parser.py</field>
+            <field name="out_format" ref="report_aeroo.report_mimetypes_xls_odt"/>
+            <field name="content_fname">xls</field>
+            <field name="parser_state">loc</field>
+            <field name="tml_source">file</field>
+            <field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+
+        <!-- Button/Menu for report -->
+        <record id="malay_xls_rep1_val" model="ir.values">
+            <field name="name">sao.aeroo.report</field>
+            <field name="model">saleorder.saleorder</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(malay_xls_rep1)" name="value_unpickle"/>
+        </record>
+
+
+
+  <!-- Action for employee Excel Report -->
+        	<record id="employee_xls_rep" model="ir.actions.report.xml">
+            <field name="name">Print</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">employee1.employee1</field>
+            <field name="report_type">aeroo</field>
+            <field name="report_name">emp.aeroo.report</field>
+            <field name="in_format">oo-ods</field>
+            <field name="report_rml">sale_manage/report/employee.ods</field>
+            <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_xls_odt"/>
+            <field name="content_fname">xls</field>
+            <field name="parser_state">default</field>
+            <field name="tml_source">file</field>
+            <field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+
+        <!-- Button/Menu for Excel report -->
+        <record id="employee_xls_rep_val" model="ir.values">
+            <field name="name">emp.aeroo.report</field>
+            <field name="model">employee1.employee1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(employee_xls_rep)" name="value_unpickle"/>
+        </record>
+        
+
+   <!--this is department Excel report-->
+			<record id ="department_xls_rep" model="ir.actions.report.xml">
+			<field name="name">Print XML</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">department1.department1</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="report_name">dep.aeroo.report</field>
+			<field name="report_rml">sale_manage/report/department.ods</field>
+			<field name="out_format" ref="report_aeroo_ooo.report_mimetypes_xls_odt"/>
+			<field name="content_fname">xls</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+        <!-- Button/Menu for Excel report -->
+        <record id="department_xls_rep_val" model="ir.values">
+            <field name="name">dep.aeroo.report</field>
+            <field name="model">department1.department1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(department_xls_rep)" name="value_unpickle"/>
+        </record>
+        
+
+	<!--this is department DOC report-->
+			<record id ="department_xls_rep1" model="ir.actions.report.xml">
+			<field name="name">Print DOC</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">department1.department1</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="report_name">dep.aeroo.report1</field>
+			<field name="report_rml">sale_manage/report/depart.odt</field>
+			<field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
+			<field name="content_fname">doc</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+        <!-- Button/Menu for DOC report  -->
+        <record id="department_xls_rep1_val" model="ir.values">
+            <field name="name">dep.aeroo.report1</field>
+            <field name="model">department1.department1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(department_xls_rep1)" name="value_unpickle"/>
+        </record>
+        
+	<!--this is Department pdf report-->
+			<record id ="department_xls_rep12" model="ir.actions.report.xml">
+			<field name="name">Print pdf</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">department1.department1</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="report_name">dep.aeroo.report12</field>
+			<field name="report_rml">sale_manage/report/mydem.odt</field>
+			<field name="out_format" ref="report_aeroo_ooo.report_mimetypes_pdf_odt"/>
+			<field name="content_fname">pdf</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+        <!-- Button/Menu for report pdf -->
+        <record id="department_xls_rep12_val" model="ir.values">
+            <field name="name">dep.aeroo.report12</field>
+            <field name="model">department1.department1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(department_xls_rep12)" name="value_unpickle"/>
+        </record>
+
+
+  <!--this is company doc report-->
+		<record id ="company_xls_rep12" model="ir.actions.report.xml">
+			<field name="name">Print doc</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">company1.company1</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="report_name">compny.aeroo.report12</field>
+			<field name="report_rml">sale_manage/report/compny.odt</field>
+			<field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
+			<field name="content_fname">doc</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+        <!-- Button/Menu for report DOC -->
+        <record id="company_xls_rep12_val" model="ir.values">
+            <field name="name">compny.aeroo.report12</field>
+            <field name="model">company1.company1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(company_xls_rep12)" name="value_unpickle"/>
+        </record>
+
+
+  <!--this is department csv report-->
+		<record id ="mycompany_xls_rep12" model="ir.actions.report.xml">
+			<field name="name">Print csv</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">department1.department1</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="report_name">mycompny.aeroo.report12</field>
+			<field name="report_rml">sale_manage/report/last.ods</field>
+			<field name="out_format" ref="report_aeroo_ooo.report_mimetypes_csv_ods"/>
+			<field name="content_fname">csv</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="auto" eval="True" />
+            <field name="multi" eval="False" />
+        </record>
+        <!-- Button/Menu for report csv -->
+        <record id="mycompany_xls_rep12_val" model="ir.values">
+            <field name="name">mycompny.aeroo.report12</field>
+            <field name="model">department1.department1</field>
+            <field eval="'client_print_multi'" name="key2"/>
+            <field eval="'ir.actions.report.xml,' +str(mycompany_xls_rep12)" name="value_unpickle"/>
+        </record>
+
+
+
+        
+    </data>
+</openerp>

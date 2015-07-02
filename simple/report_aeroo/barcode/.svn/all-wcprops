@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/appf/!svn/ver/113/report_aeroo/barcode
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/appf/!svn/ver/113/report_aeroo/barcode/__init__.py
+END
+barcode.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/appf/!svn/ver/113/report_aeroo/barcode/barcode.py
+END
+FreeMonoBold.ttf
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/appf/!svn/ver/113/report_aeroo/barcode/FreeMonoBold.ttf
+END
+EANBarCode.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/appf/!svn/ver/113/report_aeroo/barcode/EANBarCode.py
+END
+code128.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/appf/!svn/ver/113/report_aeroo/barcode/code128.py
+END
+code39.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/appf/!svn/ver/113/report_aeroo/barcode/code39.py
+END
+courB08.pbm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/appf/!svn/ver/113/report_aeroo/barcode/courB08.pbm
+END
+courB08.pil
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/appf/!svn/ver/113/report_aeroo/barcode/courB08.pil
+END

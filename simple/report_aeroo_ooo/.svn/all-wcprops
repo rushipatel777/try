@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/appf/!svn/ver/113/report_aeroo_ooo
+END
+installer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/appf/!svn/ver/113/report_aeroo_ooo/installer.xml
+END
+DocumentConverter.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/appf/!svn/ver/113/report_aeroo_ooo/DocumentConverter.py
+END
+check_deps.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/appf/!svn/ver/113/report_aeroo_ooo/check_deps.py
+END
+report.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/appf/!svn/ver/113/report_aeroo_ooo/report.py
+END
+installer.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/appf/!svn/ver/113/report_aeroo_ooo/installer.py
+END
+report_view.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/appf/!svn/ver/113/report_aeroo_ooo/report_view.xml
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/appf/!svn/ver/113/report_aeroo_ooo/__init__.py
+END
+test_temp.odt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/appf/!svn/ver/113/report_aeroo_ooo/test_temp.odt
+END
+__openerp__.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/appf/!svn/ver/113/report_aeroo_ooo/__openerp__.py
+END
